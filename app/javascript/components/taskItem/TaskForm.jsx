@@ -44,7 +44,7 @@ class TaskForm extends React.Component{
           onSubmit={(e) => this.handleSubmit(e)} 
         >
           <div className="form-group">
-            <label className="col-sm-3 control-label task">
+            <label /*className="col-sm-3 control-label task"*/>
               日付
             </label>
             <div className="col-sm-7">
@@ -57,20 +57,20 @@ class TaskForm extends React.Component{
             </div>
           </div>
           <div className="form-group">
-            <label className="col-sm-3 control-label task">
-              タスク
+            <label /*className="col-sm-3 control-label task"*/>
+              メンバー
             </label>
             <div className="col-sm-9">
               <textarea
                 className="form-control"
                 name="title"
                 rows="1"
-                placeholder="タスク記入"
+                placeholder="メンバーの名前"
               />
             </div>
           </div>
           <div className="form-group">
-            <label className="col-sm-2 control-label task">
+            <label /*</div>className="col-sm-2 control-label task"*/>
               達成
             </label>
             <input
@@ -80,20 +80,26 @@ class TaskForm extends React.Component{
               onClick={this.handleCheck}
             />
           </div>
-          {/* <label>
+                    
+           {/* 
+           <label>
             開始時間
             <input
               name="task_start"
               type="time"
               value={this.props.task_start}/>
-          </label><br /> */}
-          {/* <label>
+          </label></br > 
+
+          <label>
             終了時間
             <input
               name="task_end"
               type="time"
               value={this.props.task_end}/>
-          </label><br /> */}
+          </label><br /> 
+
+*/}
+
           <input 
             type='hidden' 
             name='authenticity_token' 
@@ -104,7 +110,7 @@ class TaskForm extends React.Component{
             value={this.props.user.id} />
           <div className="form-group">
             <div className="text-center">
-              <input type="submit" value="登録" className="btn btn-outline-light" />
+              <input type="submit" value="登録" className="btn btn-primary" /*btn btn-outline-light"*/ />
             </div>
           </div>
         </form>

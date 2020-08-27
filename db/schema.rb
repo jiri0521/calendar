@@ -12,6 +12,62 @@
 
 ActiveRecord::Schema.define(version: 2019_07_23_135900) do
 
+  create_table "TBL_SCHEDULE", primary_key: ["USER_CD", "ID"], options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "USER_CD", limit: 10, default: "", null: false
+    t.integer "ID", default: 0, null: false
+    t.string "TITLE", limit: 100
+    t.datetime "START"
+    t.datetime "END"
+    t.string "TEXTCOLOR", limit: 20
+    t.string "COLOR", limit: 20
+    t.string "URL", limit: 100
+    t.string "ALLDAY", limit: 10
+  end
+
+  create_table "T_BodyPart", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "部位", limit: 30, null: false
+  end
+
+  create_table "T_BodyPartDetail", id: :integer, default: nil, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "部位詳細", limit: 45
+    t.integer "T部位id"
+  end
+
+  create_table "T_Login", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "UserName", limit: 30, null: false
+    t.string "PassWord", limit: 30, null: false
+    t.string "Role", limit: 30, null: false
+  end
+
+  create_table "T_Patient", primary_key: "No", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "PID", null: false
+    t.string "PNAME", limit: 45, null: false
+    t.string "Birthday", limit: 45
+    t.string "Sex", limit: 6
+    t.float "Weight"
+    t.string "BodyPart", limit: 45
+    t.string "BodyPartDetail", limit: 45
+    t.float "CTDIvol"
+    t.float "DLP"
+    t.string "Date", limit: 45
+  end
+
+  create_table "T取引業者マスタ", primary_key: "取引業者ID", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "取引業者名", limit: 60, null: false
+    t.string "TEL", limit: 20, null: false
+    t.string "TEL携帯", limit: 20, null: false
+    t.string "メールアドレス", limit: 60, null: false
+    t.string "住所", limit: 40, null: false
+    t.string "担当者", limit: 20, null: false
+  end
+
+  create_table "T履歴", primary_key: "No", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "日付", limit: 60, null: false
+    t.string "ログ", limit: 60, null: false
+    t.string "ユーザー", limit: 60, null: false
+    t.index ["No"], name: "No", unique: true
+  end
+
   create_table "group_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "group_id"
     t.bigint "user_id"

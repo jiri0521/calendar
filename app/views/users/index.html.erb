@@ -1,8 +1,8 @@
-<header class="masthead" >
+<header>
   <div class="container d-flex h-100 align-items-center">
     <div class="mx-auto text-center">
       <h1 class="mx-auto my-0 text-uppercase">共有カレンダー</h1>
-      <h2 class="text-white-50 mx-auto mt-2 mb-5">仲間たちとタスクを共有することができます。<br/>タスク達成度を共有して<br/>仲間と一緒に成長を実感しましょう。</h2>
+      <h3 class="mx-auto mt-3 mb-5">仲間たちとシフトを共有することができます。<br/>一緒に成長を実感しましょう。</h3>
       <% if user_signed_in? %>
         <%= link_to "Myページ", user_path(current_user.id), class: "btn btn-primary js-scroll-trigger" %>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-primary js-scroll-trigger" %>

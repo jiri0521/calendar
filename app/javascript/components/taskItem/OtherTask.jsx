@@ -21,7 +21,7 @@ class OtherTask extends React.Component{
     return(
       <React.Fragment>
         <div className="other-task">
-          <div className="other-task-header">他ユーザーの達成度</div>
+          <div /* className="other-task-header"*/>他ユーザーの達成度</div>
           <OtherNav other_users={this.props.other_users}
                     selectedIndex={this.selectedIndex}
                     active={this.state.active}

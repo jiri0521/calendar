@@ -17,15 +17,15 @@ class TaskBar extends React.Component {
             handleFormSubmit={this.props.handleFormSubmit}
             handleCheckMyTask={this.props.handleCheckMyTask}
           />
-          <hr className="sidebar-divider my-0"></hr>
+        </div>
+        <hr className="sidebar-divider my-0"></hr>
           <OtherTask
             task_date={this.props.task_date}
             other_users={this.props.other_users}
             other_tasks={this.props.other_tasks}
           />
           <hr className="sidebar-divider my-0"></hr>
-          {/* <h5>コメント</h5> */}
-        </div>
+          {/*<h5>コメント</h5> */}
       </React.Fragment>
     );
   };

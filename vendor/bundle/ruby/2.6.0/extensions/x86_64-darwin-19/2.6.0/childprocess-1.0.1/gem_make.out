@@ -1,0 +1,5 @@
+current directory: /Users/kawajiri/projects/calendar/vendor/bundle/ruby/2.6.0/gems/childprocess-1.0.1/ext
+/Users/kawajiri/.rbenv/versions/2.6.3/bin/ruby mkrf_conf.rb
+
+current directory: /Users/kawajiri/projects/calendar/vendor/bundle/ruby/2.6.0/gems/childprocess-1.0.1/ext
+/Users/kawajiri/.rbenv/versions/2.6.3/bin/ruby -rrubygems /Users/kawajiri/projects/calendar/vendor/bundle/ruby/2.6.0/gems/rake-12.3.3/exe/rake RUBYARCHDIR\=/Users/kawajiri/projects/calendar/vendor/bundle/ruby/2.6.0/extensions/x86_64-darwin-19/2.6.0/childprocess-1.0.1 RUBYLIBDIR\=/Users/kawajiri/projects/calendar/vendor/bundle/ruby/2.6.0/extensions/x86_64-darwin-19/2.6.0/childprocess-1.0.1

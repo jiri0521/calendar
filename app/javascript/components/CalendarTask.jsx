@@ -93,8 +93,10 @@ class CalendarTask extends React.Component{
   render(){
     return(
       <React.Fragment>
+
         <div className="container-fluid box">
-          {/* <div className="member">メンバー</div> */}
+          { <div className="member"></div> }
+
           <div className="calendar-bar">
             <div className="col-calendar">
               <Calendar 
@@ -107,9 +109,6 @@ class CalendarTask extends React.Component{
                 user={this.props.user}
               />
             </div>
-          </div>
-
-          <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion task-bar">
             <TaskBar 
               tasks={this.state.tasks}
               group={this.props.group}
@@ -122,7 +121,7 @@ class CalendarTask extends React.Component{
               handleFormSubmit={this.handleFormSubmit}
               handleCheckMyTask={this.handleCheckMyTask}
             />
-          </ul>
+          </div>
         </div>
       </React.Fragment>
     )
