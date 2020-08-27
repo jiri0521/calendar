@@ -1,7 +1,9 @@
 <h1><%= t('.sign_up') %></h1>
 
 <br/>
-<div class=card>
+<div class="col-lg-3 col-md-6 mb-4">
+<div class="card h-100">
+          <div class="card-body pad">
 <%= form_with( model: User, url: user_session_path, local: true )do |f|%>
   <%= f.hidden_field :email, value: "test@example.com" %>
   <%= f.hidden_field :password, value: "password" %>
@@ -38,6 +40,8 @@
   <div class="form-group">
     <%= f.submit t('.sign_up'), class: 'btn btn-primary' %>
     <input type="button" id="return" value="もどる" onclick="history.back()", class="btn btn-primary">
+  </div>
+  </div>
   </div>
   </div>
 <% end %>
