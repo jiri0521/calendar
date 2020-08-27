@@ -52,6 +52,6 @@ test:
 #
 production:
   <<: *default
-  database: calendar_production
-  username: calendar
+  database: w5nr0_rms
+  username: w5nr0_root
   password: <%= ENV['CALENDAR_DATABASE_PASSWORD'] %>
