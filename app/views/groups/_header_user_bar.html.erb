@@ -12,8 +12,9 @@
   <hr class="sidebar-divider my-0">
 
   <li class="nav-item active">
-      <%= "施設名：" + @group.name %>
-        
+      <div class="card">
+      <%= "施設名："+ @group.name %>
+      </div>
 
     <%= link_to user_path(current_user.id), class: "nav-link" do %>
       <i class="fas fa-fw fa-list"></i>
